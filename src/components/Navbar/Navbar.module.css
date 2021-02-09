@@ -1,10 +1,12 @@
 .navbar{
-    height: 3.6rem;
+    height: fit-content;
     background-color: #161D21;
     display: flex;
     align-items: center;
     padding: 0 1rem;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
 
 .logo{
@@ -14,23 +16,40 @@
     width: 192px;
 }
 
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navbar > .menu, .navbar > .socials{
     display: flex;
 }
 
-.navbar > .menu >li{
+.navbar > .menu >li, .navbar > .menuVertical > li{
     margin: 0 1.5rem;
     color: white;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
 }
 
+.menuVertical{
+    text-align: center;
+    /* background-color: #10101085; */
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 0.5rem;
+}
 
-.navbar > .menu >li:hover{
+.navbar > .menu >li:hover,.navbar > .menuVertical > li:hover{
     color: rgb(245, 55, 30);
+    /* border-bottom: white 2px solid; */
 }
 
-.navbar > .menu > li > p{
+.navbar > .menu > li > p, .navbar > .menuVertical > li > p{
     font-size: 0.9rem !important;
+}
+.navbar > .menuVertical > li{
+    margin-top: 0.4rem;
 }
 
 .icon{
@@ -39,4 +58,59 @@
 }
 .icon:hover{
     color: rgb(245, 55, 30);
+}
+
+.hamburger, .change{
+    flex-direction: column;
+    display: none;
+}
+.rectangle1, .rectangle2, .rectangle3{
+    height: 3px;
+    width: 26px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.change .rectangle2 {opacity: 0;}
+
+.change .rectangle1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+.change .rectangle3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -8px);
+    transform: rotate(45deg) translate(-7px, -8px);
+  }
+ 
+@media only screen and (max-width: 980px){
+    .navbar > .menu >li{
+        margin: 0 1rem;
+        color: white;
+        transition: 0.5s;
+    }    
+}
+
+@media only screen and (max-width: 760px){
+    .navbar > .menu >li{
+        margin: 0 0.5rem;
+        color: white;
+        transition: 0.5s;
+    } 
+    .navbar > .socials{
+        display: none;
+    }   
+}
+
+@media only screen and (max-width: 530px){
+    .navbar{
+        align-items: inherit;
+        flex-direction: column;
+    }
+    .hamburger, .change{
+        display: flex;
+    }
+    .navbar > .menu{
+        display: none;
+    }
 }
