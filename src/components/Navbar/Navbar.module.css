@@ -1,0 +1,42 @@
+.navbar{
+    height: 3.6rem;
+    background-color: #161D21;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+
+.logo{
+    font-weight: 700 !important;
+    font-size: 1.5em !important;
+    color: white;
+    width: 192px;
+}
+
+.navbar > .menu, .navbar > .socials{
+    display: flex;
+}
+
+.navbar > .menu >li{
+    margin: 0 1.5rem;
+    color: white;
+    transition: 0.5s;
+}
+
+
+.navbar > .menu >li:hover{
+    color: rgb(245, 55, 30);
+}
+
+.navbar > .menu > li > p{
+    font-size: 0.9rem !important;
+}
+
+.icon{
+    color:white;
+    transition: 1s;
+}
+.icon:hover{
+    color: rgb(245, 55, 30);
+}
