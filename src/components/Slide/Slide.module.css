@@ -1,0 +1,108 @@
+.slide{
+    height: 100%;
+    position: relative;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+
+}
+.content{
+    position: absolute;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.title{
+    font-size: 5vw !important;
+    margin: -10px 0 0 0 !important;
+}
+.subtitle{
+    font-size: 1vw !important;
+}
+.about{
+    text-align: center;
+    width: 55%;
+}
+
+.aboutMovieHeader{
+    font-size: 1.5rem !important;
+}
+
+.aboutMovie{
+    text-align: center;
+    font-size: 0.9rem !important;
+    margin: 0.7rem 0 1rem 0 !important;
+}
+
+.readBtn{
+    background-color: rgb(255, 166, 0) !important;
+    color: white !important;
+    padding: 1rem 2.5rem !important;
+    border-radius: 0 !important;
+    margin: 0.5rem 0 !important;
+}
+
+@media only screen and (max-width: 780px){
+    .subtitle{
+        font-size: 0.6rem !important;
+    }
+    .about{
+        padding: 0.5rem;
+        width: 70%;
+    }
+    .aboutMovie{
+        font-size: 0.7rem !important;
+        margin: 0.7rem 0 2rem 0 !important;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .header{
+        margin-bottom: 0;
+    }
+    .subtitle{
+        font-size: 2vw !important;
+    }
+    .title{
+        font-size: 7vw !important;
+        margin: -10px 0 1rem 0 !important;
+    }
+}
+
+@media only screen and (max-height: 515px){
+    .content{
+        overflow: auto;
+        padding: 1rem;
+    }
+    .content{
+        flex-direction: row;
+    }
+    /* .title{
+        font-size: 2rem !important;
+        letter-spacing: -3px !important;
+    }
+    .subtitle{
+        font-size: 0.5rem !important;
+        margin: 1rem 0 1rem 0 !important;
+    }
+    .about{
+        width: 60%;
+    }
+    .aboutMovie{
+        font-size: 0.5rem !important;
+    } */
+    .readBtn{
+        padding: 0.5rem 1rem !important;
+    }
+}

@@ -15,7 +15,7 @@ const Navbar = () => {
   };
   window.addEventListener("resize", changeMenu);
   return (
-    <div className={style.navbar}>
+    <div className={!buttonState ? style.navbar : style.navbarRolled}>
       <div className={style.header}>
         <Typography className={style.logo}>FaithLift</Typography>
         <div

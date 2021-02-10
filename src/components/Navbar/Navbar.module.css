@@ -1,14 +1,30 @@
 .navbar{
     height: fit-content;
+    /* background-color: #161D21; */
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+}
+
+.navbarRolled{
+    height: fit-content;
     background-color: #161D21;
     display: flex;
     align-items: center;
     padding: 0 1rem;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
 }
-
 .logo{
     font-weight: 700 !important;
     font-size: 1.5em !important;
@@ -22,15 +38,10 @@
     align-items: center;
 }
 
-.navbar > .menu, .navbar > .socials{
+.menu, .socials{
     display: flex;
 }
 
-.navbar > .menu >li, .navbar > .menuVertical > li{
-    margin: 0 1.5rem;
-    color: white;
-    transition: 0.5s ease-in-out;
-}
 
 .menuVertical{
     text-align: center;
@@ -39,16 +50,21 @@
     width: 100%;
     margin-top: 0.5rem;
 }
+.menu >li, .menuVertical > li{
+    margin: 0 1.5rem !important;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
 
-.navbar > .menu >li:hover,.navbar > .menuVertical > li:hover{
+.menu >li:hover, .menuVertical > li:hover{
     color: rgb(245, 55, 30);
     /* border-bottom: white 2px solid; */
 }
 
-.navbar > .menu > li > p, .navbar > .menuVertical > li > p{
+.menu > li > p, .menuVertical > li > p{
     font-size: 0.9rem !important;
 }
-.navbar > .menuVertical > li{
+.menuVertical > li{
     margin-top: 0.4rem;
 }
 
@@ -84,7 +100,7 @@
   }
  
 @media only screen and (max-width: 980px){
-    .navbar > .menu >li{
+    .menu >li{
         margin: 0 1rem;
         color: white;
         transition: 0.5s;
@@ -92,25 +108,25 @@
 }
 
 @media only screen and (max-width: 760px){
-    .navbar > .menu >li{
+    .menu >li{
         margin: 0 0.5rem;
         color: white;
         transition: 0.5s;
     } 
-    .navbar > .socials{
+    .socials{
         display: none;
     }   
 }
 
 @media only screen and (max-width: 530px){
-    .navbar{
+    .navbar, .navbarRolled{
         align-items: inherit;
         flex-direction: column;
     }
     .hamburger, .change{
         display: flex;
     }
-    .navbar > .menu{
+    .menu{
         display: none;
     }
 }
