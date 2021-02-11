@@ -64,6 +64,13 @@
     .ceo{
         margin: 1rem;
     }
+    .aboutText{
+        width: 80%;
+        text-align: center;
+    }
+    .aboutContentLeft{
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 565px){

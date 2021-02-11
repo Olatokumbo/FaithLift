@@ -1,8 +1,10 @@
 .testimonials{
-    height: 60vh;
+    /* height: 60vh; */
     width: 100%;
-    background: linear-gradient(160deg, #F2F2F2 60%, #202020 60%);
-    padding: 2rem;
+    background: linear-gradient(
+        170deg
+        , #F2F2F2 50%, #202020 50%);
+    padding: 2rem 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,4 +14,20 @@
     font-weight: bold !important;
     font-size: 2rem !important;
     color: rgb(32, 32, 32) !important;
+}
+
+.testimonialContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}   
+@media only screen and (max-width: 810px){
+    .testimonials{
+        background: linear-gradient(160deg, #F2F2F2 60%, #202020 60%);
+    }
+    .testimonialContainer{
+        flex-direction: column;
+        align-items: center;
+    }
 }
