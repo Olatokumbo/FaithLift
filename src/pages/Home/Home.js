@@ -4,7 +4,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import Slideshow from "../../Sections/Slideshow/Slideshow";
 import Info from "../../Sections/Info/Info";
 import About from "../../Sections/About/About";
-import Testimonials from "../../Sections/Testimonials/Testimonials"
+import Testimonials from "../../Sections/Testimonials/Testimonials";
+import Footer from "../../components/Footer/Footer";
 import { images } from "../../components/SlideshowImages";
 const Home = () =>{
     return(
@@ -14,6 +15,7 @@ const Home = () =>{
             <Info/>
             <About/>
             <Testimonials/>
+            <Footer/>
         </div>
     )
 }
