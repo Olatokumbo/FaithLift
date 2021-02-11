@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Slideshow from "../../Sections/Slideshow/Slideshow";
 import Info from "../../Sections/Info/Info";
 import About from "../../Sections/About/About";
+import Testimonials from "../../Sections/Testimonials/Testimonials"
 import { images } from "../../components/SlideshowImages";
 const Home = () =>{
     return(
@@ -12,6 +13,7 @@ const Home = () =>{
             <Slideshow data={images}/>
             <Info/>
             <About/>
+            <Testimonials/>
         </div>
     )
 }
