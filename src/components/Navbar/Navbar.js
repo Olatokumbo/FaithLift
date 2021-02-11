@@ -8,14 +8,24 @@ import style from "./Navbar.module.css";
 
 const Navbar = () => {
   const [buttonState, setButtonState] = useState(false);
+  const [backgroundState,setBackground] = useState(false);
   const changeMenu = () => {
     if (window.innerWidth > 530) {
       setButtonState(false);
     }
   };
+
+  const changeBackground = () => {
+    if(window.scrollY >= 50){
+      setBackground(true);
+    }
+    else
+    setBackground(false);
+  }
   window.addEventListener("resize", changeMenu);
+  window.addEventListener("scroll", changeBackground);
   return (
-    <div className={!buttonState ? style.navbar : style.navbarRolled}>
+    <div className={!backgroundState ? style.navbar : style.navbarRolled}>
       <div className={style.header}>
         <Typography className={style.logo}>FaithLift</Typography>
         <div

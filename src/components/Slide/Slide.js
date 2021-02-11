@@ -23,6 +23,7 @@ const Slide = ({ image }) => {
           </Button>
         </div>
       </div>
+      <div className={style.fadeBottom}></div>
     </div>
   );
 };
