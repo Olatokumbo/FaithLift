@@ -1,6 +1,8 @@
-.movies{
-    background: #121212;
-    height: 100rem;
+.movies {
+  background: #121212;
+  height: 100rem;
+  /* width: 100vw; */
+  overflow-x: hidden;
 }
 .moviePoster {
   height: 28rem !important;
@@ -11,7 +13,7 @@
 
 .moviePoster > img {
   object-fit: cover;
-  width: 101vw;
+  width: 100vw;
   height: inherit;
 }
 
@@ -58,6 +60,48 @@
   );
 }
 
+.movieListContainer {
+  padding: 0.4rem 0;
+  margin-left: 1rem;
+}
+.movieList {
+  margin-bottom: 1rem;
+}
+.listHeader {
+  font-size: 1.5rem !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.posterList {
+  padding: 20px 0;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.poster {
+  max-height: 250px;
+  width: auto;
+  margin-right: 10px;
+  transition: transform .45s;
+}
+
+.poster:hover{
+  transform: scale(1.09);
+}
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(13deg, #292929 14%, #1f1f1f 64%);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+  border-radius: 10px;
+  /* box-shadow: inset 7px 10px 12px #f0f0f0; */
+}
 /* @media only screen and (max-width: 687px){
     .posterContent{
         margin-top: 2rem;

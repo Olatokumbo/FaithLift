@@ -52,7 +52,7 @@
 }
 .menu > li,
 .menuVertical > li {
-  margin: 0 1.5rem !important;
+  margin: 0 1rem !important;
   color: white;
   transition: 0.5s ease-in-out;
 }
@@ -109,7 +109,7 @@
 
 @media only screen and (max-width: 980px) {
   .menu > li {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     color: white;
     transition: 0.5s;
   }
