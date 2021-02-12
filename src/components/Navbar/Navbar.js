@@ -4,11 +4,12 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import YouTubeIcon from "@material-ui/icons/YouTube";
+import { Link } from "react-router-dom";
 import style from "./Navbar.module.css";
 
 const Navbar = () => {
   const [buttonState, setButtonState] = useState(false);
-  const [backgroundState,setBackground] = useState(false);
+  const [backgroundState, setBackground] = useState(false);
   const changeMenu = () => {
     if (window.innerWidth > 530) {
       setButtonState(false);
@@ -16,12 +17,10 @@ const Navbar = () => {
   };
 
   const changeBackground = () => {
-    if(window.scrollY >= 50){
+    if (window.scrollY >= 50) {
       setBackground(true);
-    }
-    else
-    setBackground(false);
-  }
+    } else setBackground(false);
+  };
   window.addEventListener("resize", changeMenu);
   window.addEventListener("scroll", changeBackground);
   return (
@@ -39,16 +38,24 @@ const Navbar = () => {
       </div>
       <ul className={!buttonState ? style.menu : style.menuVertical}>
         <li>
-          <Typography>Home</Typography>
+          <Link to="/">
+            <Typography>Home</Typography>
+          </Link>
         </li>
         <li>
-          <Typography>Articles</Typography>
+          <Link to="/articles">
+            <Typography>Articles</Typography>
+          </Link>
         </li>
         <li>
-          <Typography>Movies</Typography>
+          <Link to="/movies">
+            <Typography>Movies</Typography>
+          </Link>
         </li>
         <li>
-          <Typography>Contact</Typography>
+          <Link to="/contact">
+            <Typography>Contact</Typography>
+          </Link>
         </li>
       </ul>
       <ul className={style.socials}>
