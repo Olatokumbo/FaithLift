@@ -1,0 +1,58 @@
+.articleCard{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 18rem;
+    margin: 0 0.5rem;
+}
+.banner{
+    /* flex: 1; */
+    height: 9rem;
+}
+.banner > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.articleContent{
+    flex: 4;
+    padding: 17px;
+    background-color: white;
+}
+
+.title{
+    color: rgb(255, 115, 0) !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    line-height: 1 !important;
+}
+
+.articleMessage {
+    font-weight: lighter !important;
+    line-height: 1.1 !important;
+    color: gray !important;
+    font-size: 0.8rem !important;
+    margin: 12px 0 !important;
+}
+
+.articleFooter{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.publishedDate{
+    font-size: 11px !important;
+    color: #aaaaaa !important;
+    align-self: flex-end;
+}
+.readBtn{
+    width: 5rem;
+    height: fit-content;
+    text-transform: inherit !important;
+    font-size: 0.6rem !important;
+    border-radius: 15px !important;
+    color: #ff7300 !important;
+    background-color: #fff0e3 !important;
+    border: #ff7300 solid 2px;
+}
