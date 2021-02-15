@@ -21,6 +21,9 @@ const Navbar = () => {
       setBackground(true);
     } else setBackground(false);
   };
+  const handleClose = () => {
+    setButtonState(false);
+  };
   window.addEventListener("resize", changeMenu);
   window.addEventListener("scroll", changeBackground);
   return (
@@ -38,22 +41,30 @@ const Navbar = () => {
       </div>
       <ul className={!buttonState ? style.menu : style.menuVertical}>
         <li>
-          <Link to="/">
+          <Link to="/"
+          onClick={handleClose}
+          >
             <Typography>Home</Typography>
           </Link>
         </li>
         <li>
-          <Link to="/articles">
+          <Link to="/articles"
+          onClick={handleClose}
+          >
             <Typography>Articles</Typography>
           </Link>
         </li>
         <li>
-          <Link to="/movies">
+          <Link to="/movies"
+          onClick={handleClose}
+          >
             <Typography>Movies</Typography>
           </Link>
         </li>
         <li>
-          <Link to="/contact">
+          <Link to="/contactUs"
+          onClick={handleClose}
+          >
             <Typography>Contact</Typography>
           </Link>
         </li>

@@ -52,7 +52,7 @@
 }
 .menu > li,
 .menuVertical > li {
-  margin: 0 1rem !important;
+  margin: 0.8rem 1rem !important;
   color: white;
   transition: 0.5s ease-in-out;
 }
@@ -66,9 +66,6 @@
 .menu > li > a >p,
 .menuVertical > li > a >p {
   font-size: 0.9rem !important;
-}
-.menuVertical > li {
-  margin-top: 0.4rem;
 }
 
 .icon {
