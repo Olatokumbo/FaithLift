@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 import ArticleCard from "../../components/ArticleCard/ArticleCard";
+import { Link } from "react-router-dom";
 import style from "./Articles.module.css";
 
 const Articles = () => {
@@ -22,13 +23,13 @@ const Articles = () => {
         </li>
       </ul>
       <div className={style.articlesContainer}>
-        <ArticleCard />
-        <ArticleCard />
-        <ArticleCard />
-        <ArticleCard />
-        <ArticleCard />
-        <ArticleCard />
-        <ArticleCard />
+        <Link to="/articleInfo"><ArticleCard /></Link>
+        <Link to="/articleInfo"><ArticleCard /></Link>
+        <Link to="/articleInfo"><ArticleCard /></Link>
+        <Link to="/articleInfo"><ArticleCard /></Link>
+        <Link to="/articleInfo"><ArticleCard /></Link>
+        <Link to="/articleInfo"><ArticleCard /></Link>
+        <Link to="/articleInfo"><ArticleCard /></Link>
       </div>
     </div>
   );
