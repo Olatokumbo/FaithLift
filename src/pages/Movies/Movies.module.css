@@ -63,6 +63,7 @@
 .movieListContainer {
   padding: 0.4rem 0;
   margin-left: 1rem;
+  min-height: calc(100vh - 224px);
 }
 .movieList {
   margin-bottom: 1rem;

@@ -1,6 +1,6 @@
 .navbar {
   height: fit-content;
-  /* background-color: #161D21; */
+  background-color: #161d217c;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,8 +63,8 @@
   /* border-bottom: white 2px solid; */
 }
 
-.menu > li > p,
-.menuVertical > li > p {
+.menu > li > a >p,
+.menuVertical > li > a >p {
   font-size: 0.9rem !important;
 }
 .menuVertical > li {
@@ -73,10 +73,11 @@
 
 .icon {
   color: white;
-  transition: 1s;
 }
 .icon:hover {
   color: rgb(245, 55, 30);
+  transform: rotate(40deg);
+  transition: transform 0.6s ;
 }
 
 .hamburger,

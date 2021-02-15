@@ -1,13 +1,16 @@
 .articles{
-    padding: 6rem 2rem 2rem 2rem;
+    padding: 6rem 2rem 6rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: teal;
-    height: 100vh;
+    background-color: #222222;
+    /* height: 100vh; */
+    min-height: calc(100vh - 224px);
+    color: white !important;
 }
 .title{
-    font-size: 2.2rem;
+    font-size: 2rem !important;
+    font-weight: 300 !important;
 }
 
 .menu{
@@ -27,12 +30,24 @@
 }
 
 .menuItem:hover{
-    border-bottom: black solid;
+    border-bottom: white solid;
 
 }
 
 .articlesContainer{
-    padding: 3rem 0;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+@media only screen and (max-width: 939px){
+    .articlesContainer{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 624px){
+    .articlesContainer{
+        grid-template-columns: auto;
+    }
 }
