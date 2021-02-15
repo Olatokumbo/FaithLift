@@ -28,6 +28,7 @@ const Articles = () => {
         <ArticleCard />
         <ArticleCard />
         <ArticleCard />
+        <ArticleCard />
       </div>
     </div>
   );

@@ -29,7 +29,9 @@ const Navbar = () => {
   return (
     <div className={!backgroundState ? style.navbar : style.navbarRolled}>
       <div className={style.header}>
-        <Typography className={style.logo}>FaithLift</Typography>
+        <Link to="/">
+          <Typography className={style.logo}>FaithLift</Typography>
+        </Link>
         <div
           className={buttonState ? style.change : style.hamburger}
           onClick={() => setButtonState((prevState) => !prevState)}
@@ -41,30 +43,22 @@ const Navbar = () => {
       </div>
       <ul className={!buttonState ? style.menu : style.menuVertical}>
         <li>
-          <Link to="/"
-          onClick={handleClose}
-          >
+          <Link to="/" onClick={handleClose}>
             <Typography>Home</Typography>
           </Link>
         </li>
         <li>
-          <Link to="/articles"
-          onClick={handleClose}
-          >
+          <Link to="/articles" onClick={handleClose}>
             <Typography>Articles</Typography>
           </Link>
         </li>
         <li>
-          <Link to="/movies"
-          onClick={handleClose}
-          >
+          <Link to="/movies" onClick={handleClose}>
             <Typography>Movies</Typography>
           </Link>
         </li>
         <li>
-          <Link to="/contactUs"
-          onClick={handleClose}
-          >
+          <Link to="/contactUs" onClick={handleClose}>
             <Typography>Contact</Typography>
           </Link>
         </li>
