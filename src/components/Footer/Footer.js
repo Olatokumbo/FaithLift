@@ -34,7 +34,7 @@ const Footer = () => {
           <div className={style.rectangle}></div>
           <div className={style.socials}>
             <IconButton
-              size="small"
+              // size="small"
               onClick={() =>
                 window.open(
                   "https://www.youtube.com/channel/UCbvSvzeLnUrT9XfYqSWeemQ",
@@ -45,7 +45,7 @@ const Footer = () => {
               <YouTubeIcon className={style.icon} />
             </IconButton>
             <IconButton
-              size="small"
+              // size="small"
               onClick={() =>
                 window.open(
                   "https://www.instagram.com/pastorjfodesola",
@@ -56,7 +56,7 @@ const Footer = () => {
               <InstagramIcon className={style.icon} />
             </IconButton>
             <IconButton
-              size="small"
+              // size="small"
               onClick={() =>
                 window.open("https://www.facebook.com/JFOdesola", "_blank")
               }
@@ -64,7 +64,7 @@ const Footer = () => {
               <FacebookIcon className={style.icon} />
             </IconButton>
             <IconButton
-              size="small"
+              // size="small"
               onClick={() =>
                 window.open("https://twitter.com/pastorjfodesola", "_blank")
               }
