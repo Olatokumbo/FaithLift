@@ -7,6 +7,7 @@ import Movies from "./pages/Movies/Movies";
 import Articles from "./pages/Articles/Articles";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import ArticleInfo from "./pages/ArticleInfo/ArticleInfo";
+import MovieInfo from "./pages/MovieInfo/MovieInfo";
 import ScrollToTop from "./ScrollToTop";
 import "./App.css";
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route exact path="/articles" component={Articles} />
         <Route exact path="/contactUs" component={ContactUs} />
         <Route exact path="/articleInfo" component={ArticleInfo} />
+        <Route exact path="/movie" component={MovieInfo} />
       </Switch>
       <Footer />
     </Router>
