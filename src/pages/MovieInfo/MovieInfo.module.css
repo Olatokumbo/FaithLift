@@ -37,15 +37,19 @@
       #111
     );
   }
-
-.movieContent{
-    height: 100vh;
+.movieInfo{
     background-color: #1C1C1C;
+        height: 100%;
+}
+.movieContent{
+    /* background-color: #1C1C1C; */
+    display: flex;
     position: relative;
+    padding: 0.5rem;
 }
 .posterImage{
     max-height: 300px;
-    width: auto;
+    max-width: 13rem;
     display: inline-block;
     margin-top: -110px;
     margin-right: 1rem;
@@ -56,12 +60,13 @@
 
 }
 .movieDetails{
-    display: inline;
-    position: absolute;
+    /* display: inline; */
+    /* position: absolute; */
     /* background: red; */
     padding: 0.5rem;
     /* width: 100%; */
-    height: 11.9rem;
+    /* height: 11.9rem; */
+    height: fit-content;
 }
 
 .movieDetailsContainer{
@@ -110,14 +115,18 @@
 }
 
 .recommendation{
-    margin-top: 4rem;
+    margin-top: 2rem;
     padding:  2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .recommendHeader{
     font-size: 1.5rem !important;
     color: white !important;
     font-weight: bold !important;
+    align-self: flex-start;
 }
 
 .ytBtn {
@@ -129,4 +138,61 @@
     margin: -7rem 0 0 0 !important;
     color: white !important;
   }
-  
+
+.similarMoviesList{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+@media only screen and (max-width: 986px){
+    .movieDetailsContainer{
+        flex-direction: column;
+    }
+    .similarMoviesList{
+        grid-template-columns: auto auto auto;
+    }
+    /* .recommendation{
+        margin-top: 8rem;
+    } */
+}
+
+@media only screen and (max-width: 760px){
+    .similarMoviesList{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width:650px){
+    .banner{
+        height: 30vh;
+    }
+    .posterImage{
+        max-width: 9rem;
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .movieContent{
+        flex-direction: column;
+    }
+    .movieDetails{
+        text-align: center;
+    }
+    .movieTime{
+        justify-content: center;
+    }
+    .movieDescription{
+        margin: auto !important;
+    }
+    .staffName{
+        text-align: initial !important;
+    }
+    .ytBtn{
+        margin: 0.5rem 0 !important;
+    }
+}
+@media only screen and (max-width: 480px){
+    .similarMoviesList{
+        grid-template-columns: auto;
+    }
+}

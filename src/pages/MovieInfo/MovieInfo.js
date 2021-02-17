@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../../assets/images/Header.png";
 import Poster from "../../assets/images/jailer.jpg";
 import { Typography, Button } from "@material-ui/core";
+import MovieCard from "../../components/MovieCard/MovieCard";
 import style from "./MovieInfo.module.css";
 
 const MovieInfo = () => {
@@ -52,10 +53,16 @@ const MovieInfo = () => {
             </div>
           </div>
         </div>
-        <div className={style.recommendation}>
-          <Typography className={style.recommendHeader}>
-            Similar Movies
-          </Typography>
+      </div>
+      <div className={style.recommendation}>
+        <Typography className={style.recommendHeader}>
+          Similar Movies
+        </Typography>
+        <div className={style.similarMoviesList}>
+          <MovieCard />
+          <MovieCard />
+          <MovieCard />
+          <MovieCard />
         </div>
       </div>
     </div>
