@@ -1,4 +1,4 @@
 export const truncate = (text)=>{
-    return text.length > 50 ? text.substring(0, 50) + "..." : text;
+    return text.length > 360 ? text.substring(0, 360) + "..." : text;
 }
 

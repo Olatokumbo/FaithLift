@@ -7,6 +7,7 @@ import style from "./Articles.module.css";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
+  const [category, setCategory] = useState("all");
   useEffect(() => {
     const articlesList = [];
     firestore
@@ -26,22 +27,22 @@ const Articles = () => {
     <div className={style.articles}>
       <Typography className={style.title}>Articles</Typography>
       <ul className={style.menu}>
-        <li>
-          <Typography className={style.menuItem}>ALL</Typography>
+        <li onClick={()=>setCategory("all")}>
+          <Typography className={category==="all" ? style.selected : style.menuItem}>ALL</Typography>
         </li>
-        <li>
-          <Typography className={style.menuItem}>NEWS</Typography>
+        <li onClick={()=>setCategory("news")}>
+          <Typography className={category==="news" ? style.selected : style.menuItem}>NEWS</Typography>
         </li>
-        <li>
-          <Typography className={style.menuItem}>EVENTS</Typography>
+        <li onClick={()=>setCategory("events")}>
+          <Typography className={category==="events" ? style.selected : style.menuItem}>EVENTS</Typography>
         </li>
-        <li>
-          <Typography className={style.menuItem}>WORD</Typography>
+        <li onClick={()=>setCategory("word")}>
+          <Typography className={category==="word" ? style.selected : style.menuItem}>WORD</Typography>
         </li>
       </ul>
       <div className={style.articlesContainer}>
         {articles.map((data) => (
-          <Link key={data.id} to={`/article/${data.id}`}>
+          <Link key={data.id} to={`/articles/${data.id}`}>
             <ArticleCard data={data} />
           </Link>
         ))}
