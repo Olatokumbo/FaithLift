@@ -28,46 +28,16 @@ const Movies = () => {
         <div className={style.movieList}>
           <Typography className={style.listHeader}>LATEST FILMS</Typography>
           <div className={style.posterList}>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-          </div>
-        </div>
-        <div className={style.movieList}>
-          <Typography className={style.listHeader}>LATEST FILMS</Typography>
-          <div className={style.posterList}>
-          <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-          </div>
-        </div>
-        <div className={style.movieList}>
-          <Typography className={style.listHeader}>LATEST FILMS</Typography>
-          <div className={style.posterList}>
-          <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
-            <Link to="/movie" ><img className={style.poster} src={Movie} alt="movie" /></Link>
+            <Link to="/movies/" ><img className={style.poster} src={Movie} alt="movie" /></Link>
+            <Link to="/movies/" ><img className={style.poster} src={Movie} alt="movie" /></Link>
+            <Link to="/movies/" ><img className={style.poster} src={Movie} alt="movie" /></Link>
+            <Link to="/movies/" ><img className={style.poster} src={Movie} alt="movie" /></Link>
+            <Link to="/movies/" ><img className={style.poster} src={Movie} alt="movie" /></Link>
+            <Link to="/movies/" ><img className={style.poster} src={Movie} alt="movie" /></Link>
+            <Link to="/movies/" ><img className={style.poster} src={Movie} alt="movie" /></Link>
+            <Link to="/movies/" ><img className={style.poster} src={Movie} alt="movie" /></Link>
+            <Link to="/movies/" ><img className={style.poster} src={Movie} alt="movie" /></Link>
+            <Link to="/movies/" ><img className={style.poster} src={Movie} alt="movie" /></Link>
           </div>
         </div>
       </div>
