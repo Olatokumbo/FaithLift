@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Typography } from "@material-ui/core";
 import ArticleCard from "../../components/ArticleCard/ArticleCard";
 import { Link } from "react-router-dom";
+import { firestore } from "../../firebase/firebase";
 import style from "./Articles.module.css";
 
 const Articles = () => {
+  const [articles, setArticles] = useState([]);
+  useEffect(() => {
+    const articlesList = [];
+    firestore
+      .collection("articles")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          articlesList.push({ ...{ id: doc.id }, ...doc.data() });
+        });
+      })
+      .then(() => {
+        setArticles(articlesList);
+        console.log("Fetching...");
+      });
+  }, []);
   return (
     <div className={style.articles}>
       <Typography className={style.title}>Articles</Typography>
@@ -23,13 +40,11 @@ const Articles = () => {
         </li>
       </ul>
       <div className={style.articlesContainer}>
-        <Link to="/articleInfo"><ArticleCard /></Link>
-        <Link to="/articleInfo"><ArticleCard /></Link>
-        <Link to="/articleInfo"><ArticleCard /></Link>
-        <Link to="/articleInfo"><ArticleCard /></Link>
-        <Link to="/articleInfo"><ArticleCard /></Link>
-        <Link to="/articleInfo"><ArticleCard /></Link>
-        <Link to="/articleInfo"><ArticleCard /></Link>
+        {articles.map((data) => (
+          <Link key={data.id} to={`/article/${data.id}`}>
+            <ArticleCard data={data} />
+          </Link>
+        ))}
       </div>
     </div>
   );

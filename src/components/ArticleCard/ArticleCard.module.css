@@ -1,7 +1,8 @@
 .articleCard{
+    height: 21rem;
     display: flex;
     flex-direction: column;
-    height: fit-content;
+    /* height: fit-content; */
     max-width: 18rem;
     min-width: 14rem;
     margin: 1rem 0.5rem;
@@ -24,6 +25,9 @@
     height: 100%;
 }
 .articleContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex: 4;
     padding: 17px;
     background-color: white;
