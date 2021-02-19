@@ -10,8 +10,13 @@ const Articles = () => {
   const [category, setCategory] = useState("all");
   useEffect(() => {
     const articlesList = [];
-    firestore
-      .collection("articles")
+    let query;
+    if (category === "all")
+      query = firestore.collection("articles");
+    else 
+      query = firestore.collection("articles").where("category", "==", category);
+      
+    query
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
@@ -22,22 +27,38 @@ const Articles = () => {
         setArticles(articlesList);
         console.log("Fetching...");
       });
-  }, []);
+  }, [category]);
   return (
     <div className={style.articles}>
       <Typography className={style.title}>Articles</Typography>
       <ul className={style.menu}>
-        <li onClick={()=>setCategory("all")}>
-          <Typography className={category==="all" ? style.selected : style.menuItem}>ALL</Typography>
+        <li onClick={() => setCategory("all")}>
+          <Typography
+            className={category === "all" ? style.selected : style.menuItem}
+          >
+            ALL
+          </Typography>
         </li>
-        <li onClick={()=>setCategory("news")}>
-          <Typography className={category==="news" ? style.selected : style.menuItem}>NEWS</Typography>
+        <li onClick={() => setCategory("news")}>
+          <Typography
+            className={category === "news" ? style.selected : style.menuItem}
+          >
+            NEWS
+          </Typography>
         </li>
-        <li onClick={()=>setCategory("events")}>
-          <Typography className={category==="events" ? style.selected : style.menuItem}>EVENTS</Typography>
+        <li onClick={() => setCategory("events")}>
+          <Typography
+            className={category === "events" ? style.selected : style.menuItem}
+          >
+            EVENTS
+          </Typography>
         </li>
-        <li onClick={()=>setCategory("word")}>
-          <Typography className={category==="word" ? style.selected : style.menuItem}>WORD</Typography>
+        <li onClick={() => setCategory("word")}>
+          <Typography
+            className={category === "word" ? style.selected : style.menuItem}
+          >
+            WORD
+          </Typography>
         </li>
       </ul>
       <div className={style.articlesContainer}>

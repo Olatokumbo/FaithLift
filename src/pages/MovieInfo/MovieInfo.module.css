@@ -104,6 +104,7 @@
 
 .movieStaff{
     display: flex;
+    align-items: baseline;
     margin-bottom: 0.6rem;
 }
 .staffTitle{
