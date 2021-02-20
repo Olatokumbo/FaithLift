@@ -103,10 +103,11 @@ const MovieInfo = ({
               Similar Movies
             </Typography>
             <div className={style.similarMoviesList}>
+              {/* <MovieCard />
               <MovieCard />
               <MovieCard />
-              <MovieCard />
-              <MovieCard />
+              <MovieCard /> */}
+              <Typography variant="h5" style={{color: "white", margin: '5rem'}}>Coming Soon...</Typography>
             </div>
           </div>
         </div>
