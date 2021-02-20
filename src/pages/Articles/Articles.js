@@ -7,7 +7,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import style from "./Articles.module.css";
 
 const Articles = () => {
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState(null);
   const [loadingState, setLoadingState] = useState(false);
   const [category, setCategory] = useState("all");
   useEffect(() => {
@@ -68,7 +68,7 @@ const Articles = () => {
         </li>
       </ul>
       <div className={style.articlesContainer}>
-        { loadingState ? <CircularProgress/> : articles.map((data) => (
+        { loadingState ? <CircularProgress/> : articles?.map((data) => (
           <Link key={data.id} to={`/articles/${data.id}`}>
             <ArticleCard data={data} />
           </Link>
