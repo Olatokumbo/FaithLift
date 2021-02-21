@@ -15,9 +15,12 @@
   object-fit: cover;
   width: 100vw;
   height: inherit;
+  transform: scaleX(-1);
+  filter: brightness(0.8);
 }
 
 .posterContent {
+  z-index: 2;
   position: absolute;
   color: white !important;
   display: flex;

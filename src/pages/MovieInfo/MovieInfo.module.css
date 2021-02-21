@@ -48,8 +48,10 @@
     padding: 0.5rem;
 }
 .posterImage{
-    max-height: 300px;
-    max-width: 13rem;
+    height: 300px;
+    width:auto;
+    /* max-height: 300px; */
+    /* max-width: 13rem; */
     display: inline-block;
     margin-top: -110px;
     margin-right: 1rem;
@@ -170,6 +172,9 @@
         height: 30vh;
     }
     .posterImage{
+        width: unset;
+        height: unset;
+        max-height: 300px;
         max-width: 9rem;
         align-self: center;
         margin-left: auto;

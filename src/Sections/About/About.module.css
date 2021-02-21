@@ -11,11 +11,14 @@
 
 .title{
     font-size: 1.8rem !important;
+    font-family: 'Martel', serif !important;
 }
 .subtitle{
     font-size: 0.8rem !important;
     width: 30% !important;
     margin: auto !important;
+    font-family: 'Martel', serif !important;
+    line-height: inherit !important;
 }
 
 .aboutContent{
@@ -63,6 +66,7 @@
     }
     .ceo{
         margin: 1rem;
+        height: 18rem;
     }
     .aboutText{
         width: 80%;
