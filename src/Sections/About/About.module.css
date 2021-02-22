@@ -56,7 +56,7 @@
 
 @media only screen and (max-width: 1055px){
     .about{
-        padding: 2rem !important;
+        padding: 2rem;
     }
     .subtitle{
         width: 50% !important;
@@ -69,7 +69,7 @@
         height: 18rem;
     }
     .aboutText{
-        width: 80%;
+        width: 70%;
         text-align: center;
     }
     .aboutContentLeft{
@@ -78,10 +78,16 @@
 }
 
 @media only screen and (max-width: 565px){
+    .about{
+        padding: 2rem 1rem;
+    }
+    .aboutText{
+        width: 100%;
+    }
     .title{
         font-size: 1.5rem !important;
     }
     .subtitle{
-        width: 100% !important;
+        width: 90% !important;
     }
 }

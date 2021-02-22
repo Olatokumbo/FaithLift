@@ -4,7 +4,9 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import CallIcon from "@material-ui/icons/Call";
+import MailIcon from "@material-ui/icons/Mail";
+import RoomIcon from "@material-ui/icons/Room";
 import { Link } from "react-router-dom";
 // import { Link } from "react-scroll";
 // import Fade from 'react-reveal/Fade';
@@ -13,66 +15,64 @@ import style from "./Footer.module.css";
 const Footer = () => {
   return (
     <div className={style.footer}>
-      <div className={style.left}>
+      <div className={style.contact}>
+        <div className={style.contactInfo}>
+          <CallIcon />
+          <Typography>885-223-337</Typography>
+        </div>
+        <div className={style.contactInfo}>
+          <MailIcon />
+          <Typography>faithlift@gmail.com</Typography>
+        </div>
+        <div className={style.contactInfo}>
+          <RoomIcon />
+          <Typography>RCCG Redemption Camp</Typography>
+        </div>
+      </div>
+      <div className={style.bottomFooter}>
         <Link to="/">
           <Typography className={style.logo}>FaithLift</Typography>
         </Link>
-        <div className={style.copyRight}>
-          <Typography className={style.copyRightText}>
-            © Copyright {new Date().getFullYear()}
-          </Typography>
-          <Typography className={style.copyRightText}>
-            All Rights Reserved.
-          </Typography>
+        <div className={style.socials}>
+          <IconButton
+            // size="small"
+            onClick={() =>
+              window.open(
+                "https://www.youtube.com/channel/UCbvSvzeLnUrT9XfYqSWeemQ",
+                "_blank"
+              )
+            }
+          >
+            <YouTubeIcon className={style.icon} />
+          </IconButton>
+          <IconButton
+            // size="small"
+            onClick={() =>
+              window.open("https://www.instagram.com/pastorjfodesola", "_blank")
+            }
+          >
+            <InstagramIcon className={style.icon} />
+          </IconButton>
+          <IconButton
+            // size="small"
+            onClick={() =>
+              window.open("https://www.facebook.com/JFOdesola", "_blank")
+            }
+          >
+            <FacebookIcon className={style.icon} />
+          </IconButton>
+          <IconButton
+            // size="small"
+            onClick={() =>
+              window.open("https://twitter.com/pastorjfodesola", "_blank")
+            }
+          >
+            <TwitterIcon className={style.icon} />
+          </IconButton>
         </div>
-      </div>
-      <div className={style.right}>
-        <button className={style.upBtn}>
-          <KeyboardArrowUpIcon />
-        </button>
-        <div className={style.lowerContent}>
-          <div className={style.rectangle}></div>
-          <div className={style.socials}>
-            <IconButton
-              // size="small"
-              onClick={() =>
-                window.open(
-                  "https://www.youtube.com/channel/UCbvSvzeLnUrT9XfYqSWeemQ",
-                  "_blank"
-                )
-              }
-            >
-              <YouTubeIcon className={style.icon} />
-            </IconButton>
-            <IconButton
-              // size="small"
-              onClick={() =>
-                window.open(
-                  "https://www.instagram.com/pastorjfodesola",
-                  "_blank"
-                )
-              }
-            >
-              <InstagramIcon className={style.icon} />
-            </IconButton>
-            <IconButton
-              // size="small"
-              onClick={() =>
-                window.open("https://www.facebook.com/JFOdesola", "_blank")
-              }
-            >
-              <FacebookIcon className={style.icon} />
-            </IconButton>
-            <IconButton
-              // size="small"
-              onClick={() =>
-                window.open("https://twitter.com/pastorjfodesola", "_blank")
-              }
-            >
-              <TwitterIcon className={style.icon} />
-            </IconButton>
-          </div>
-        </div>
+        <Typography className={style.copyRight}>
+          © Copyright {new Date().getFullYear()} All Rights Reserved.
+        </Typography>
       </div>
     </div>
   );
