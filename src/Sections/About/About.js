@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Button } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import image from "../../assets/images/main.jpg"
 import style from "./About.module.css";
 const About = () => {
@@ -29,9 +29,9 @@ const About = () => {
             inventore veritatis et quasi architecto beatae vitae dicta sunt
             explicabo.
           </Typography>
-          <Button className={style.readBtn} variant="contained">
+          {/* <Button className={style.readBtn} variant="contained">
             Read More
-          </Button>
+          </Button> */}
         </div>
         <div className={style.aboutContentRight}>
             <img className={style.ceo} src={image} alt="main"/>

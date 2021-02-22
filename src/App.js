@@ -9,6 +9,7 @@ import ContactUs from "./pages/ContactUs/ContactUs";
 import ArticleInfo from "./pages/ArticleInfo/ArticleInfo";
 import MovieInfo from "./pages/MovieInfo/MovieInfo";
 import ScrollToTop from "./ScrollToTop";
+import Page404 from "./pages/Page404/Page404";
 import { AppProvider } from "./contexts/AppContext";
 import "./App.css";
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           <Route exact path="/contactUs" component={ContactUs} />
           <Route exact path="/articles/:articleId" component={ArticleInfo} />
           <Route exact path="/movies/:movieId" component={MovieInfo} />
+          <Route component={Page404} />
         </Switch>
         <Footer />
       </Router>

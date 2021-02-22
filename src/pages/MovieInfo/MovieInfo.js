@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 // import Poster from "../../assets/images/jailer.jpg";
 import { Typography, Button } from "@material-ui/core";
 import MovieCard from "../../components/MovieCard/MovieCard";
+import Page404 from "../Page404/Page404";
 import Loading from "../Loading/Loading";
 import { firestore } from "../../firebase/firebase";
 import style from "./MovieInfo.module.css";
@@ -31,7 +32,7 @@ const MovieInfo = ({
     return <Loading />;
   } else {
     if (movie === undefined) {
-      return <div>Page 404</div>;
+      return <Page404/>
     } else {
       return (
         <div className={style.movieInfo}>

@@ -3,6 +3,7 @@ import { Typography } from "@material-ui/core";
 import { firestore } from "../../firebase/firebase";
 import moment from "moment";
 import Loading from "../Loading/Loading";
+import Page404 from "../Page404/Page404";
 import style from "./ArticleInfo.module.css";
 
 const ArticleInfo = ({
@@ -30,7 +31,7 @@ const ArticleInfo = ({
     return <Loading errorMessage={error} />;
   } else {
     if (article === undefined) {
-      return <div>Page 404</div>;
+      return <Page404/>;
     } else {
       return (
         <div className={style.article}>
