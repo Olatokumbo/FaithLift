@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import Poster from "../../assets/images/poster.png";
+// import Poster from "../../assets/images/poster.png";
 // import Movie from "../../assets/images/jailer.jpg";
 import { Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
