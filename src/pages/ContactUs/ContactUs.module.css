@@ -28,6 +28,7 @@
 
 .mainContact{
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding: 2rem;
     background-color: #ffffffb0;
