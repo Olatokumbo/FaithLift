@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../assets/images/Header.png";
 import { Typography, Button } from "@material-ui/core";
 import { firestore } from "../../firebase/firebase";
 import { Link } from "react-router-dom";
@@ -10,7 +9,7 @@ const LatestMovies = () => {
     const movieList = [];
     firestore
       .collection("movies")
-      .orderBy("releasedDate", "desc")
+      .orderBy("releasedDate", "asc")
       .limit(2)
       .get()
       .then((querySnapShot) => {
@@ -28,7 +27,7 @@ const LatestMovies = () => {
       <div className={style.moviesContainer}>
        {latestMovies?.map((movie)=>{
          return (
-          <div className={style.movie}>
+          <div key={movie.id} className={style.movie}>
           <div className={style.content}>
             <Typography className={style.title}>{movie.name}</Typography>
             <Typography className={style.year}>{movie.year}</Typography>
@@ -42,42 +41,10 @@ const LatestMovies = () => {
               View More
             </Button></Link>
           </div>
-          <img className={style.moviePoster} src={Header} alt="header" />
+          <img className={style.moviePoster} src={movie.coverPhoto} alt="header" />
         </div>
          )
        })}
-        <div className={style.movie}>
-          <div className={style.content}>
-            <Typography className={style.title}>The Jailer</Typography>
-            <Typography className={style.year}>2021</Typography>
-            {/* <Typography className={style.subtitle}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua
-            </Typography> */}
-            <Button className={style.readBtn} variant="contained">
-              View More
-            </Button>
-          </div>
-          <img className={style.moviePoster} src={Header} alt="header" />
-        </div>
-        <div className={style.movie}>
-          <div className={style.content}>
-            <Typography className={style.title}>The Jailer</Typography>
-            <Typography className={style.year}>2021</Typography>
-            {/* <Typography className={style.subtitle}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua
-            </Typography> */}
-            <Button className={style.readBtn} variant="contained">
-              View More
-            </Button>
-          </div>
-          <img className={style.moviePoster} src={Header} alt="header" />
-        </div>
       </div>
     </div>
   );

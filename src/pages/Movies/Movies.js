@@ -41,7 +41,7 @@ const Movies = () => {
   return (
     <div className={style.movies}>
       <div className={style.moviePoster}>
-        <div className={style.posterContent}>
+       {movies &&  <div className={style.posterContent}>
           <Typography className={style.posterTitle}>{poster?.title}</Typography>
           <Typography className={style.posterSubtitle}>
             {poster?.info}
@@ -53,7 +53,7 @@ const Movies = () => {
           >
             Watch on YouTube
           </Button>
-        </div>
+        </div>}
         <img src={poster?.poster} alt="poster" />
         <div className={style.fadeBottom}></div>
       </div>

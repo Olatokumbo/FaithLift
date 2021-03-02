@@ -32,7 +32,7 @@ const MovieInfo = ({
     return <Loading />;
   } else {
     if (movie === undefined) {
-      return <Page404/>
+      return <Page404 />;
     } else {
       return (
         <div className={style.movieInfo}>
@@ -61,13 +61,11 @@ const MovieInfo = ({
                   >
                     Watch on YouTube
                   </Button>
+                                <Typography className={style.movieTitle}>{movie.name}</Typography>
                   <div className={style.movieTime}>
                     <Typography>{movie.year}</Typography>
                     <Typography>{`${movie.duration.hours}hr ${movie.duration.minutes}mins`}</Typography>
                   </div>
-                  <Typography className={style.movieTitle}>
-                    {movie.title}
-                  </Typography>
                   <Typography className={style.movieDescription}>
                     {movie.info}
                   </Typography>
@@ -108,7 +106,12 @@ const MovieInfo = ({
               <MovieCard />
               <MovieCard />
               <MovieCard /> */}
-              <Typography variant="h5" style={{color: "white", margin: '5rem'}}>Coming Soon...</Typography>
+              <Typography
+                variant="h5"
+                style={{ color: "white", margin: "5rem" }}
+              >
+                Coming Soon...
+              </Typography>
             </div>
           </div>
         </div>

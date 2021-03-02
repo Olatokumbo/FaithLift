@@ -45,7 +45,7 @@
     /* background-color: #1C1C1C; */
     display: flex;
     position: relative;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
 }
 .posterImage{
     height: 300px;
@@ -95,7 +95,7 @@
 }
 .movieTitle{
     color: white;
-    font-size: 3rem !important;
+    font-size: 1.5rem !important;
     font-weight: 600 !important;
 }
 .movieDescription{
