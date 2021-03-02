@@ -3,7 +3,7 @@
     width: 100%;
     background: linear-gradient(
         170deg
-        , #F2F2F2 50%, #202020 50%);
+        , #F2F2F2 49.8%, #202020 50%);
     padding: 2rem 0.5rem;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
 }   
 @media only screen and (max-width: 810px){
     .testimonials{
-        background: linear-gradient(160deg, #F2F2F2 60%, #202020 60%);
+        background: linear-gradient(160deg, #F2F2F2 59.8%, #202020 60%);
     }
     .testimonialContainer{
         flex-direction: column;

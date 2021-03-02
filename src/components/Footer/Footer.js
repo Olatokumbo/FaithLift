@@ -8,6 +8,7 @@ import CallIcon from "@material-ui/icons/Call";
 import MailIcon from "@material-ui/icons/Mail";
 import RoomIcon from "@material-ui/icons/Room";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/images/logo.png";
 // import { Link } from "react-scroll";
 // import Fade from 'react-reveal/Fade';
 import style from "./Footer.module.css";
@@ -26,12 +27,14 @@ const Footer = () => {
         </div>
         <div className={style.contactInfo}>
           <RoomIcon />
-          <Typography>RCCG Redemption Camp</Typography>
+          <Typography>
+            Suite 2, RCCG CRM Business Office, Redemption Camp,
+          </Typography>
         </div>
       </div>
       <div className={style.bottomFooter}>
         <Link to="/">
-          <Typography className={style.logo}>FaithLift</Typography>
+          <img className={style.logo} src={Logo} alt="logo" />
         </Link>
         <div className={style.socials}>
           <IconButton

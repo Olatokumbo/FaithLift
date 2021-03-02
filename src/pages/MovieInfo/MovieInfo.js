@@ -63,7 +63,7 @@ const MovieInfo = ({
                   </Button>
                   <div className={style.movieTime}>
                     <Typography>{movie.year}</Typography>
-                    <Typography>{`${movie.duration.hour}hr ${movie.duration.minutes}mins`}</Typography>
+                    <Typography>{`${movie.duration.hours}hr ${movie.duration.minutes}mins`}</Typography>
                   </div>
                   <Typography className={style.movieTitle}>
                     {movie.title}

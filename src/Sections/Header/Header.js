@@ -8,10 +8,9 @@ const Header = () => {
       <div className={style.layer}>
         <Typography className={style.title}>FAITHLIFT</Typography>
         <Typography className={style.subtitle}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          Pisteuo Faithlift productions sets to bring massive change and
+          transformation into the film industry in other to uphold sanity and
+          moral values of our dear nation.
         </Typography>
       </div>
       {/* <div className={style.fadeBottom}></div> */}

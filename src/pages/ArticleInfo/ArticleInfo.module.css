@@ -2,6 +2,7 @@
   background: #222222;
 }
 .articleInfo {
+  min-height: 100vh;
   width: calc(100vw - 25%);
   margin: auto;
   background-color: rgb(233, 233, 233);

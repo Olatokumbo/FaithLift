@@ -13,7 +13,7 @@ const Articles = () => {
   const [lastArticle, setLastArticle] = useState(null);
   const [buttonState, setButtonState] = useState(false); 
   useEffect(() => {
-    setButtonState(false);
+    setButtonState(true);
     setLoadingState(true);
     setLastArticle(null);
     const articlesList = [];
@@ -31,6 +31,8 @@ const Articles = () => {
           articlesList.push({ ...{ id: doc.id }, ...doc.data() });
         });
         setLastArticle(querySnapshot.docs[querySnapshot.docs.length - 1]);
+        if(querySnapshot.docs.length>0)
+        setButtonState(false);
       })
       .then(() => {
         setArticles(articlesList);

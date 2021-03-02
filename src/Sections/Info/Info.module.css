@@ -51,7 +51,8 @@
     margin: 0.5rem;
     height: fit-content;
     height: 10rem;
-    width: auto;
+    /* width: auto; */
+    width: 13rem;
 }
 
 @media only screen and (max-width: 1063px){

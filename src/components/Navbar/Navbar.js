@@ -5,6 +5,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/images/logo.png";
 import style from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -30,7 +31,7 @@ const Navbar = () => {
     <div className={!backgroundState ? style.navbar : style.navbarRolled}>
       <div className={style.header}>
         <Link to="/">
-          <Typography className={style.logo}>FaithLift</Typography>
+          <img className={style.logo} src={Logo} alt="logo"/>
         </Link>
         <div
           className={buttonState ? style.change : style.hamburger}

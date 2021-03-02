@@ -2,7 +2,7 @@
   background-color: #202020;
 }
 .bottomFooter {
-  padding: 2rem 0.9rem;
+  padding: 1.5rem 0.9rem;
   background-color: #1a1a1a;
   /* height: 14rem; */
   /* box-shadow: 1px 3px 23px -4px rgba(0, 0, 0, 0.8) inset;
@@ -30,14 +30,12 @@
 }
 
 .logo {
-  font-weight: 700 !important;
-  font-size: 1.5em !important;
-  color: white;
-  margin-bottom: -0.5rem !important;
+ width: 8rem;
 }
 
 .bottomFooter a:first-child{
   align-self: baseline !important;
+  margin: auto !important;
 }
 .socials {
   text-align: end;
